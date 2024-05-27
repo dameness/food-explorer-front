@@ -8,7 +8,7 @@ export const RootLayout = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={theme}>
-      <div className='dark:text-neutral-200 text-neutral-700'>
+      <div className='dark:text-neutral-200 text-neutral-700 dark:bg-slate-950 min-h-screen'>
         <Header />
         <main className='flex w-[96%] max-w-7xl mx-auto h-[calc(100vh - 160px)] flex-col items-center'>
           <Outlet />
