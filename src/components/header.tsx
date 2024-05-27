@@ -1,14 +1,7 @@
 import { ThemeContext } from '@/contexts/themeContext';
-import {
-  ChefHat,
-  Hexagon,
-  LogOut,
-  Menu,
-  Moon,
-  Search,
-  Sun,
-} from 'lucide-react';
+import { ChefHat, Hexagon, LogOut, Menu, Moon, Sun } from 'lucide-react';
 import { useContext } from 'react';
+import { SearchBar } from './search';
 export const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
@@ -24,13 +17,7 @@ export const Header = () => {
           <Hexagon className='text-blue-400 opacity-60' fill='#60a5fa' />
           food explorer
         </div>
-        <div className='sm:flex classname w-1/2 items-center hidden border border-slate-200/60 py-1.5 px-2 gap-1 rounded-lg'>
-          <Search size={16} className='opacity-60' />
-          <input
-            className='bg-transparent text-sm'
-            placeholder='Search for dishes or ingredients'
-          />
-        </div>
+        <SearchBar onSubmit={() => {}} />
         <div className='flex items-center gap-2'>
           <ChefHat size={28} />
           <LogOut className='sm:block hidden' size={28} />
