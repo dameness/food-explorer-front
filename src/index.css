@@ -3,8 +3,11 @@
 @tailwind utilities;
 
 @layer utilities {
-  .Gradients-100 {
+  .GradientsDark-100 {
     @apply bg-gradient-to-b from-Dark/Dark-900 to-Dark/Dark-700;
+  }
+  .GradientsLight-100 {
+    @apply bg-gradient-to-b from-Light/Light-200 to-Light/Light-400;
   }
 }
 * {
