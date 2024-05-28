@@ -1,6 +1,6 @@
 import { Card } from './card';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -13,11 +13,17 @@ export const Slider = ({ cards }: SliderProps) => {
   return (
     <div className='w-full'>
       <Swiper
-        modules={[Pagination, Navigation]}
+        modules={[Navigation]}
         spaceBetween={24}
-        slidesPerView={cards.length < 3 ? cards.length : 3}
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
         navigation={{ enabled: true }}
-        pagination={{ clickable: true }}
       >
         {cards.map((card, index) => (
           <SwiperSlide key={index}>

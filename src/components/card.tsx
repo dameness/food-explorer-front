@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ChevronRight, Heart, Minus, Plus } from 'lucide-react';
 export const Card = () => {
   return (
-    <div className='relative flex flex-col items-center justify-center gap-3 p-6 sm:w-72 min-w-52 sm:h-[28rem] min-h-72  dark:bg-Dark/Dark-300 bg-Light/Light-200 border dark:border-Dark/Dark-200 border-Light/Light-400 rounded-lg'>
+    <div className='relative flex flex-col items-center justify-center gap-3 p-6 sm:min-w-72 min-w-52 sm:h-[28rem] min-h-72  dark:bg-Dark/Dark-300 bg-Light/Light-200 border dark:border-Dark/Dark-200 border-Light/Light-400 rounded-lg'>
       <Heart className='absolute top-3 right-3' />
       <img
         src='/assets/mask-group.png'
