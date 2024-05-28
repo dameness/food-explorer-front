@@ -1,5 +1,5 @@
 import { ThemeContext } from '@/contexts/themeContext';
-import { ChefHat, Hexagon, LogOut, Menu, Moon, Sun } from 'lucide-react';
+import { ReceiptText, Hexagon, LogOut, Menu, Moon, Sun } from 'lucide-react';
 import { useContext } from 'react';
 import { SearchBar } from './search';
 export const Header = () => {
@@ -19,7 +19,7 @@ export const Header = () => {
         </div>
         <SearchBar onSubmit={() => {}} />
         <div className='flex items-center gap-2'>
-          <ChefHat size={28} />
+          <ReceiptText size={28} />
           <LogOut className='sm:block hidden' size={28} />
         </div>
       </div>
