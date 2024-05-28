@@ -1,7 +1,7 @@
 export const Home = () => {
   return (
     <>
-      <div className='mt-10 flex items-center w-full xs:h-32 h-28 p-3 bg-slate-900'>
+      <div className='mt-10 flex items-center w-full xs:h-32 h-28 p-3 bg-gradient-to-b from-Dark/Dark-900 to bg-Dark/Dark-700'>
         <img
           className='object-cover overflow-visible w-40'
           src='/assets/macarons.png'

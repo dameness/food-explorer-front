@@ -5,7 +5,7 @@ import { SearchBar } from './search';
 export const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <header className='w-full dark:bg-slate-900'>
+    <header className='w-full dark:bg-Dark/Dark-600'>
       <div className='flex justify-between items-center max-w-7xl mx-auto h-24 p-4'>
         <div className='flex items-center gap-2 '>
           <Menu size={28} />
@@ -14,7 +14,7 @@ export const Header = () => {
           </button>
         </div>
         <div className='flex items-center gap-1 font-semibold sm:text-xl text-lg'>
-          <Hexagon className='text-blue-400 opacity-60' fill='#60a5fa' />
+          <Hexagon className='text-Tints/Cake-100' fill='#065E7C' />
           food explorer
         </div>
         <SearchBar onSubmit={() => {}} />
