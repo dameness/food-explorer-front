@@ -3,6 +3,7 @@ import { RootLayout } from './components/layout';
 import { Home } from './pages/home';
 import { SignIn } from './pages/signIn';
 import { SignUp } from './pages/signUp';
+import { Food } from './pages/food';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -11,6 +12,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: '/food',
+        element: <Food />,
       },
     ],
     //FAZER ERROR ELEMENT
