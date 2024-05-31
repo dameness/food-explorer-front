@@ -6,7 +6,7 @@ type ButtonProps = ComponentProps<'button'>;
 export const Button = ({ className, ...props }: ButtonProps) => (
   <button
     className={twMerge(
-      'px-6 py-3 w-full rounded-lg bg-Tints/Tomato-100 text-Light/Light-300',
+      'flex items-center justify-between gap-2 px-6 py-3 w-full rounded-lg bg-Tints/Tomato-100 text-Light/Light-300',
       className
     )}
     {...props}
