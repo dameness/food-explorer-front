@@ -8,7 +8,9 @@ export const Header = () => {
     <header className='w-full dark:bg-Dark/Dark-600'>
       <div className='flex justify-between items-center max-w-7xl mx-auto h-24 p-4'>
         <div className='flex items-center gap-2 '>
-          <Menu size={28} />
+          <button className='sm:hidden block'>
+            <Menu size={28} />
+          </button>
           <button onClick={toggleTheme}>
             {theme === 'light' ? <Sun size={28} /> : <Moon size={28} />}
           </button>
@@ -17,7 +19,7 @@ export const Header = () => {
           <Hexagon className='text-Tints/Cake-100' fill='#065E7C' />
           food explorer
         </div>
-        <SearchBar onSubmit={() => {}} />
+        <SearchBar className='sm:flex hidden' onSubmit={() => {}} />
         <div className='flex items-center gap-2'>
           <ReceiptText size={28} />
           <LogOut className='sm:block hidden' size={28} />
