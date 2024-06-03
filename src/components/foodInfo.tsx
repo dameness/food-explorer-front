@@ -9,14 +9,27 @@ interface FoodProps {
 export const FoodInfo = ({ data }: FoodProps) => {
   return (
     <>
-      <h1 className='text-2xl'>{data.ingredients}</h1>
-      <h1>{data.description}</h1>
-
       <img
         src='/assets/mask-group.png'
         className='sm:w-48 xs:w-36 w-24'
         alt='food'
       />
+
+      <h1>{data.name}</h1>
+      <h1>{data.description}</h1>
+      <div className='grid grid-cols-3 gap-3 w-11/12 max-w-72'>
+        {data.ingredients.map((ingredient) => (
+          <div
+            key={ingredient}
+            className='text-center xs:text-sm text-xs text-ellipsis overflow-hidden bg-Dark/Dark-1000 px-2 py-1.5 rounded-md'
+          >
+            {ingredient}
+          </div>
+        ))}
+      </div>
+
+      <h1 className='text-2xl'></h1>
+
       <div className='flex items-center'>
         <div className='flex items-center gap-1'>
           <Minus />
