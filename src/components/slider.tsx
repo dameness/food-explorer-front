@@ -11,12 +11,15 @@ interface SliderProps {
 
 export const Slider = ({ cards }: SliderProps) => {
   return (
-    <div className='w-full'>
+    <div className='xs:w-full w-5/6'>
       <Swiper
         modules={[Navigation]}
         spaceBetween={24}
         breakpoints={{
           0: {
+            slidesPerView: 1,
+          },
+          475: {
             slidesPerView: 2,
           },
           1024: {
