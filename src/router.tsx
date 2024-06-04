@@ -4,6 +4,7 @@ import { Home } from './pages/home';
 import { SignIn } from './pages/signIn';
 import { SignUp } from './pages/signUp';
 import { Food } from './pages/food';
+import { AddFood } from './pages/addFood';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: '/food',
         element: <Food />,
+      },
+      {
+        path: '/new',
+        element: <AddFood />,
       },
     ],
     //FAZER ERROR ELEMENT
