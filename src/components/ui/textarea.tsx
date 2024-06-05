@@ -11,7 +11,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     return (
       <textarea
         className={twMerge(
-          `dark:bg-Dark/Dark-800 bg-Light/Light-300 text-inherit resize-none p-2 rounded-lg w-full ${
+          `dark:bg-Dark/Dark-800 bg-Light/Light-300 text-inherit resize-none py-2.5 px-2 rounded-lg w-full ${
             error ? 'border border-red-400' : 'border-2'
           }`,
           className

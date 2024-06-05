@@ -10,7 +10,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
   ({ className, error, ...props }, ref) => (
     <select
       className={twMerge(
-        `p-2 rounded-lg w-full ${error && 'border border-red-400'}`,
+        `py-2.5 px-2  rounded-lg w-full ${error && 'border border-red-400'}`,
         className
       )}
       ref={ref}
