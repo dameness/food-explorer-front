@@ -38,7 +38,7 @@ export const FoodInfo = ({ data }: FoodProps) => {
             01
             <Plus />
           </div>
-          <Button className='justify-center md:max-w-60 w-2/3'>
+          <Button className='md:max-w-60 w-2/3'>
             <ReceiptText />
             {'$ ' + data.price.toFixed(2)}
           </Button>

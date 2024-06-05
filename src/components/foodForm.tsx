@@ -40,11 +40,11 @@ export const FoodForm = ({ type = 'add' }: Props) => {
       </div>
       <div className='flex items-center justify-end gap-4 md:col-start-5 md:col-span-5'>
         {type === 'edit' && (
-          <Button className='w-1/2 dark:bg-Dark/Dark-800 bg-Light/Light-300 text-inherit mt-4 flex items-center justify-center'>
+          <Button className='w-1/2 dark:bg-Dark/Dark-800 bg-Light/Light-300 text-inherit mt-4'>
             Delete Food
           </Button>
         )}
-        <Button className='w-1/2 bg-Tints/Tomato-400 mt-4 flex items-center justify-center'>
+        <Button className='w-1/2 bg-Tints/Tomato-400 mt-4'>
           {type === 'edit' ? 'Save changes' : 'Submit'}
         </Button>
       </div>
