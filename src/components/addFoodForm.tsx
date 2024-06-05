@@ -5,20 +5,38 @@ import { TextArea } from './ui/textarea';
 
 export const AddFoodForm = () => {
   return (
-    <form className='w-full flex flex-col gap-2 [&>input]:bg-Dark/Dark-800'>
-      <label htmlFor='image'> Image</label>
-      <Input id='image' />
-      <label htmlFor='name'> Name</label>
-      <Input id='name' />
-      <label htmlFor='category'> Category</label>
-      <Select id='category' />
-      <label htmlFor='ingredients'> Ingredients</label>
-      <Input id='ingredients' />
-      <label htmlFor='price'> Price</label>
-      <Input id='price' />
-      <label htmlFor='description'> Description</label>
-      <TextArea id='description' />
-      <Button className='bg-Tints/Tomato-400' />
+    <form className='grid md:grid-cols-9 grid-cols-1 gap-4'>
+      <div className='flex flex-col gap-4 md:col-span-2'>
+        <label htmlFor='image'> Image</label>
+        <Input id='image' />
+      </div>
+      <div className='flex flex-col gap-4 md:col-span-4'>
+        <label htmlFor='name'> Name</label>
+        <Input id='name' placeholder='Ex.: Caesar salad' />
+      </div>
+      <div className='flex flex-col gap-4 md:col-span-3'>
+        <label htmlFor='category'> Category</label>
+        <Select id='category' />
+      </div>
+      <div className='flex flex-col gap-4 md:col-span-7'>
+        <label htmlFor='ingredients'> Ingredients</label>
+        <Input id='ingredients' />
+      </div>
+      <div className='flex flex-col gap-4 md:col-span-2'>
+        <label htmlFor='price'> Price</label>
+        <Input id='price' placeholder='$ 0.00' />
+      </div>
+      <div className='flex flex-col gap-4 md:col-span-9'>
+        <label htmlFor='description'> Description</label>
+        <TextArea
+          className='border-0 md:h-48 h-32'
+          id='description'
+          placeholder='Briefly describe the food ingredients and composition...'
+        />
+      </div>
+      <Button className='bg-Tints/Tomato-400 mt-4 flex items-center justify-center'>
+        Submit
+      </Button>
     </form>
   );
 };
