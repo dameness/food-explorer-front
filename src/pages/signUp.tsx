@@ -43,7 +43,7 @@ export const SignUp = () => {
                 id='password'
               />
             </div>
-            <Button type='submit'>Sign in</Button>
+            <Button type='submit'>Sign up</Button>
           </form>
           <h1 className='self-center'>
             Already have an account?{' '}
