@@ -26,7 +26,7 @@ export const FoodInfo = ({ data }: FoodProps) => {
           {data.ingredients.map((ingredient) => (
             <div
               key={ingredient}
-              className=' font-medium text-center text-sm truncate bg-Dark/Dark-1000 px-2 py-1.5 rounded-md'
+              className=' font-medium text-center text-sm truncate dark:bg-Dark/Dark-1000 bg-Light/Light-300 text-inheritpx-2 py-1.5 rounded-md'
             >
               {ingredient}
             </div>
