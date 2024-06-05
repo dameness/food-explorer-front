@@ -1,4 +1,4 @@
-import { AddFoodForm } from '@/components/addFoodForm';
+import { FoodForm } from '@/components/foodForm';
 import { ChevronLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export const AddFood = () => {
@@ -12,7 +12,7 @@ export const AddFood = () => {
         return
       </Link>
       <h1 className='text-4xl font-medium'>New food</h1>
-      <AddFoodForm />
+      <FoodForm />
     </div>
   );
 };

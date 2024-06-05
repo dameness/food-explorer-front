@@ -3,7 +3,11 @@ import { Input } from './ui/input';
 import { Select } from './ui/select';
 import { TextArea } from './ui/textarea';
 
-export const AddFoodForm = () => {
+interface Props {
+  type?: 'add' | 'edit';
+}
+
+export const FoodForm = ({ type = 'add' }: Props) => {
   return (
     <form className='grid md:grid-cols-9 grid-cols-1 gap-4'>
       <div className='flex flex-col gap-4 md:col-span-2'>
@@ -34,9 +38,16 @@ export const AddFoodForm = () => {
           placeholder='Briefly describe the food ingredients and composition...'
         />
       </div>
-      <Button className='bg-Tints/Tomato-400 mt-4 flex items-center justify-center'>
-        Submit
-      </Button>
+      <div className='flex items-center justify-end gap-4 md:col-start-5 md:col-span-5'>
+        {type === 'edit' && (
+          <Button className='w-1/2 dark:bg-Dark/Dark-800 bg-Light/Light-300 text-inherit mt-4 flex items-center justify-center'>
+            Delete Food
+          </Button>
+        )}
+        <Button className='w-1/2 bg-Tints/Tomato-400 mt-4 flex items-center justify-center'>
+          {type === 'edit' ? 'Save changes' : 'Submit'}
+        </Button>
+      </div>
     </form>
   );
 };
