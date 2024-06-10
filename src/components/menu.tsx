@@ -1,7 +1,15 @@
 import { X } from 'lucide-react';
 import { SearchBar } from './search';
+import { useMediaQuery } from 'react-responsive';
+import { useEffect } from 'react';
 
 export const Menu = ({ close }: { close: () => void }) => {
+  const notSmallScreen = useMediaQuery({ minWidth: 640 });
+
+  useEffect(() => {
+    if (notSmallScreen) close();
+  }, [notSmallScreen]);
+
   return (
     <div className='absolute z-50 left-4 w-64 h-64 p-2 flex flex-col gap-2 dark:bg-Dark/Dark-1000 bg-Light/Light-300 rounded-lg'>
       <div className='flex items-center gap-1.5'>
