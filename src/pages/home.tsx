@@ -6,8 +6,8 @@ export const Home = () => {
       <div className='mt-10 flex items-center w-full xs:h-32 h-28 p-3 dark:GradientsDark-100 GradientsLight-100 '>
         <img
           className='object-cover overflow-visible xs:w-48 w-40 '
-          src='/assets/burguer.png'
-          alt='burguer'
+          src='/assets/burger.png'
+          alt='burger'
         />
         <div className='xs:text-left text-center'>
           <h1 className='sm:text-3xl xs:text-2xl text-xl font-semibold'>
